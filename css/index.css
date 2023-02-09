@@ -86,11 +86,110 @@ p, a {
 /* header section */
 header {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url('../img/home-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
+}
+
+header div {
+    /* formatting */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(225, 239, 230);;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+header div h1 {
+    /* formatting */
+    width: 60%;
+    padding: 4% 0;
+    text-decoration: none;
+    line-height: 4.4rem;
+    padding: 4% 0;
+    /* border: 1px solid green; */
+    text-align: center;
+
+}
+
+header div h1 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 4rem;
+    /* line-height: 1rem; */
+}
+
+header div nav, footer nav {
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* gap: 1rem; */
+}
+
+header div nav button, footer nav button {
+	background: none;
+	color: inherit;
+	border: none;
+    /* border: 5px solid red; */
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+ 
+}
+
+header div nav button a, footer nav button a {
+    /* formatting */
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social {
+    padding: 2% 0;
+
+    flexbox properties
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2.4rem;
+}
+
+.social button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    /* width: 3rem; */
+}
+
+.social button a {
+    color: inherit;
+    
+}
+
+.social button a i {
+    color: inherit;
+    width: 1rem;
 }
 
 /* spacers */
@@ -108,20 +207,41 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    color: rgb(225, 239, 230);
+    padding-top: 2rem;
+    
+}
+
+.gallery h2 {
+    padding: 2rem;
+}
+
+
+.gallery div {
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 4rem;
 }
 
 /* about us section */
 .about {
     width: 100%;
-    height: 75vh;
+    height: 100%;
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+
+    color: rgb(225, 239, 230);
 }
 
 .about-container {
@@ -135,10 +255,11 @@ header {
 
 .about h2 {
     width: 100%;
+    padding: 14rem 0;
 }
 
 .about-container .text {
-    width: 50%;
+    width: 75%;
 }
 
 /* contact us section */
@@ -149,6 +270,18 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(0, 4, 17);
+    
+    color: rgb(225, 239, 230);
+    text-decoration: none;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;;
+    align-items: center;
+    align-content: center;
+    /* gap: 1rem; */
 }
 
 .contact-container {
@@ -167,33 +300,101 @@ header {
 
 .contact p {
     padding: .5vh 0;
+    
 }
 
 .info {
     width: 100%;
+
+    /* flexbox properties */
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+   
 }
 
 .address {
-    width: 25%;
+    width: 100%;
 }
 
 .hours {
-    width: 25%;
+    width: 100%;
     padding-bottom: 2.5vh;
 }
 
 .contacts {
-    width: 25%;
+    width: 100%;
+}
+
+#phone, #email {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    height: 100%;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    /* border: 1px solid rgb(100, 4, 17); */
+    color: rgb(225, 239, 230);
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+#signup {
+    font-size: 2.4rem;
+    width: 80%;
+    padding: 1rem 0;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: center;
+}
+
+#signup label {
+    text-align: center;
+    padding: 1rem;
+}
+#signup input, #signup button {
+    font-size: 2rem;
+
+}
+
+#signup button {
+    margin-bottom: 1rem;
+}
+
+#copyright {
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+#copyright p {
+    font-size: 1.6rem;
 }
 
 /* mobile media query */
@@ -249,5 +450,6 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        color: green;
     }
 }
