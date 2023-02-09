@@ -85,6 +85,7 @@ p, a {
 
 /* header section */
 header {
+    /* formatting */
     width: 100%;
     height: 80vh;
     background-image: url('../img/home-header.jpg');
@@ -107,6 +108,10 @@ header div {
     align-items: center;
     align-content: center;
     gap: 1rem;
+}
+
+header nav div {
+    gap: 0rem;
 }
 
 header div h1 {
@@ -159,7 +164,7 @@ header div nav button a, footer nav button a {
 }
 
 .social {
-    padding: 2% 0;
+    padding: 1rem 0;
 
     flexbox properties
     display: flex;
@@ -365,6 +370,7 @@ footer {
     flex-wrap: nowrap;
     align-items: stretch;
     align-content: center;
+    max-width: 400px;
 }
 
 #signup label {
@@ -373,6 +379,7 @@ footer {
 }
 #signup input, #signup button {
     font-size: 2rem;
+    
 
 }
 
@@ -397,59 +404,47 @@ footer {
     font-size: 1.6rem;
 }
 
-/* mobile media query */
-@media (max-width: 428px) {
-    /* header section */
-    
+/* Relevant Screen Checkpoints
+   ===========================
+   micro: 360px
+   mobile: 428px
+   tablet: 1024px
+   laptop: 1280px
+   desktop: 1920px
 
-    /* gallery section */
-    .gallery {
-        height: auto;
-    }
-    
-    /* about us section */
+*/
 
-    .about {
-        height: 200vh;
+/* screen sizes greater than or equal to 360px */
+@media (min-width: 360px) {
+    * {
+        color: red;
     }
-    
-    .about h2 {
-        width: 100%;
-        padding-top: 5vh;
-    }
-    
-    .about-container .text {
-        width: 85%;
-    }
-    
-    /* contact us section */
-    .contact h3 {
-        padding-top: 2.5vh;
-    }
-    
-    .info {
-        flex-wrap: wrap;
-    }
-    
-    .address {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
-    
-    .hours {
-        width: 100%;
-    }
-    
-    .contacts {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
+}
 
-    /* footer section */
-    footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
+/* screen sizes greater than or equal to 428px */
+@media (min-width: 428px) {
+    * {
+        color: orange;
+    }
+}
+
+/* screen sizes greater than or equal to 1024px */
+@media (min-width: 1024px) {
+    * {
+        color: yellow;
+    }
+}
+
+/* screen sizes greater than or equal to 1280px */
+@media (min-width: 1280px) {
+    * {
         color: green;
+    }
+}
+
+/* screen sizes greater than or equal to 1920px */
+@media (min-width: 1920px) {
+    * {
+        color: blue;
     }
 }
