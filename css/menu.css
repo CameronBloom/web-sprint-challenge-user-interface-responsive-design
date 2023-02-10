@@ -94,6 +94,107 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
+}
+
+header div {
+    /* formatting */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(225, 239, 230);;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+header nav div {
+    gap: 0rem;
+}
+
+header div h1 {
+    /* formatting */
+    width: 60%;
+    padding: 4% 0;
+    text-decoration: none;
+    line-height: 4.4rem;
+    /* border: 1px solid green; */
+    text-align: center;
+}
+
+header div h1 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 4rem;
+    /* line-height: 1rem; */
+}
+
+header div nav, footer nav {
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* gap: 1rem; */
+}
+
+header div nav button, footer nav button {
+	background: none;
+	color: inherit;
+	border: none;
+    /* border: 5px solid red; */
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+ 
+}
+
+header div nav button a, footer nav button a {
+    /* formatting */
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social {
+    padding: 1rem 0;
+
+    flexbox properties
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2.4rem;
+}
+
+.social button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    /* width: 3rem; */
+}
+
+.social button a {
+    color: inherit;
+    
+}
+
+.social button a i {
+    color: inherit;
+    width: 1rem;
 }
 
 /* spacer */
@@ -123,20 +224,79 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    height: 100%;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    /* border: 1px solid rgb(100, 4, 17); */
+    color: rgb(225, 239, 230);
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
 }
+
+#signup {
+    font-size: 2.4rem;
+    width: 80%;
+    padding: 1rem 0;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: center;
+    max-width: 400px;
+}
+
+#signup label {
+    text-align: center;
+    padding: 1rem;
+}
+#signup input, #signup button {
+    font-size: 2rem;
+}
+
+#signup button {
+    margin-bottom: 1rem;
+}
+
+#copyright {
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+#copyright p {
+    font-size: 1.6rem;
+}
+
+
+
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
+    /* .header-title {
         width: 75%;
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
-    }
+    } */
 
     /* menu */
     .menu {
@@ -144,9 +304,176 @@ footer {
     }
 
     /* footer section */
-    footer {
+    /* footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    } */
+    
+}
+
+/* Relevant Screen Checkpoints
+   ===========================
+   micro: 360px
+   mobile: 428px
+   tablet: 1024px
+   laptop: 1280px
+   desktop: 1920px
+
+*/
+
+/* screen sizes greater than or equal to 360px */
+@media (min-width: 360px) {
+    * {
+        color: red;
+    }
+}
+
+/* screen sizes greater than or equal to 428px */
+@media (min-width: 428px) {
+    * {
+        color: orange;
+    }
+}
+
+/* screen sizes greater than or equal to 1024px */
+@media (min-width: 1024px) {
+    * {
+        color: yellow;
+        max-width: 1280px;
+    }
+
+    header div h1 {
+        padding-top: 4%;
+        padding-bottom: 2%;
+    }
+
+    head div nav {
+        width: 100rem;
+        background-color: none;
+    }
+
+    header div nav div {
+        /* flexbox properties */
+        font-size: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 10rem;
+        /* align-items: center; */
+        /* align-content: center; */
+        /* gap: 1rem; */
+        background-color: transparent;
+    }
+
+    header div nav div button, header div nav div button a {
+        font-size: 2rem;
+        background-color: none;
+    }
+
+    .social {
+        gap: 10rem;
+    }
+
+    .gallery div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 4rem;
+    }
+
+    .gallery div img {
+        max-width: 28%;
+    }
+
+    .about h2 {
+        padding: 4rem 0;
+    }
+    .about-container .text {
+        padding: 2rem 0;
+        width: 80;
+    }
+    .info {
+        display: flex;
+        flex-direction: row;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        max-width: 128rem;
+    }
+    footer nav {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: center;
+    }
+    #signup {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #signup input {
+        font-size: 1.6rem;
+        display: block;
+        white-space: nowrap;
+        height: 3rem;
+        width: 60%;
+    }
+    #signup button {
+        font-size: 1.6rem;
+        display: block;
+        white-space: nowrap;
+        height: 3rem;
+    }
+    a {
+        font-size: 2rem;
+    }
+    #signup label {
+        text-align: center;
+        padding: 0rem;
+    }
+    #signup input {
+        font-size: 2.4rem;
+    }
+    #signup button {
+        font-size: 2rem;
+    }
+    #copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 128rem;
+        font-size: 1.6rem;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+    
+}
+
+/* screen sizes greater than or equal to 1280px */
+@media (min-width: 1280px) {
+    * {
+        color: green;
+    }
+}
+
+/* screen sizes greater than or equal to 1920px */
+@media (min-width: 1920px) {
+    * {
+        color: blue;
     }
 }
