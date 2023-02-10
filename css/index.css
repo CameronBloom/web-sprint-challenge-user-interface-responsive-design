@@ -120,10 +120,8 @@ header div h1 {
     padding: 4% 0;
     text-decoration: none;
     line-height: 4.4rem;
-    padding: 4% 0;
     /* border: 1px solid green; */
     text-align: center;
-
 }
 
 header div h1 a {
@@ -379,8 +377,6 @@ footer {
 }
 #signup input, #signup button {
     font-size: 2rem;
-    
-
 }
 
 #signup button {
@@ -432,6 +428,122 @@ footer {
 @media (min-width: 1024px) {
     * {
         color: yellow;
+        max-width: 1280px;
+    }
+
+    header div h1 {
+        padding-top: 4%;
+        padding-bottom: 2%;
+    }
+
+    head div nav {
+        width: 100rem;
+        background-color: none;
+    }
+
+    header div nav div {
+        /* flexbox properties */
+        font-size: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 10rem;
+        /* align-items: center; */
+        /* align-content: center; */
+        /* gap: 1rem; */
+        background-color: transparent;
+    }
+
+    header div nav div button, header div nav div button a {
+        font-size: 2rem;
+        background-color: none;
+    }
+
+    .social {
+        gap: 10rem;
+    }
+
+    .gallery div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 4rem;
+    }
+
+    .gallery div img {
+        max-width: 28%;
+    }
+
+    .about h2 {
+        padding: 4rem 0;
+    }
+    
+    .about-container .text {
+        padding: 2rem 0;
+        width: 80;
+    }
+    
+
+    .info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        max-width: 128rem;
+    }
+
+    footer nav {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        align-content: center;
+    }
+
+    #signup {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #signup input {
+        font-size: 1.6rem;
+        display: block;
+        white-space: nowrap;
+        height: 3rem;
+    }
+
+    #signup button {
+        font-size: 1.6rem;
+        display: block;
+        white-space: nowrap;
+        height: 3rem;
+        
+        
+    }
+    
+    #copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        max-width: 128rem;
+        gap: 1rem;
+        margin: 0 auto;
     }
 }
 
