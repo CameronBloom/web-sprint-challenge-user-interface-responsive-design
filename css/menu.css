@@ -89,7 +89,7 @@ p, a {
 /* header section */
 header {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url('../img/menu-header.jpg');
     background-size: cover;
     background-position: center;
@@ -210,15 +210,96 @@ header div nav button a, footer nav button a {
 }
 
 /* menu */
+em {
+    font-style: italic;
+}
+hr.solid {
+    border-top: 0.5rem solid black;
+    text-align: center;
+    width: 80%;
+    margin: 2rem 10%;
+    max-width: 30rem;
+    /* padding: 2rem 0; */
+}
 
 .menu {
     width: 100%;
     height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-image: url('../img/staff-bartender.jpg'); */
+    /* background-color: rgb(0, 4, 17); */
+    background: rgb(225, 239, 230);
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* gap: 1rem; */
+
+    padding-top: 4rem;
+}
+
+.menu h2 {
+    border-bottom: 1rem solid black;
+    text-align: center;
+    width: 80%;
+    margin: 0 10%;
+    max-width: 40rem;
+}
+
+.menu-section {
+    padding-top: 4rem;
+    text-align: center;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* gap: 1rem; */
+}
+
+.menu-section h3 {
+    border: 0.5rem solid black;
+    text-align: center;
+    width: 90%;
+    margin: 0 10%;
+    max-width: 30rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    /* flexbox properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0rem;
+
+    width: 80%;
+    margin: 0 10%;
+    max-width: 30rem;
+}
+
+.menu-item h4 {
+
+}
+
+.menu-item p {
+    
+}
+
+.last {
+    padding-bottom: 4rem;
 }
 
 /* footer section */
@@ -287,31 +368,6 @@ footer {
 
 
 
-
-/* mobile media query */
-@media (max-width: 428px) {
-    /* header section */
-    /* .header-title {
-        width: 75%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 4rem;
-    } */
-
-    /* menu */
-    .menu {
-        background-image: none;
-    }
-
-    /* footer section */
-    /* footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
-    } */
-    
-}
-
 /* Relevant Screen Checkpoints
    ===========================
    micro: 360px
@@ -325,22 +381,33 @@ footer {
 /* screen sizes greater than or equal to 360px */
 @media (min-width: 360px) {
     * {
-        color: red;
+        /* color: red; */
     }
 }
 
 /* screen sizes greater than or equal to 428px */
 @media (min-width: 428px) {
     * {
-        color: orange;
+        /* color: orange; */
     }
 }
 
 /* screen sizes greater than or equal to 1024px */
 @media (min-width: 1024px) {
     * {
-        color: yellow;
+        /* color: yellow; */
         max-width: 1280px;
+    }
+
+    body {
+        width: 100%;
+        background-color: rgb(0, 4, 17);
+        margin: 0 auto;
+        
+    }
+
+    hr {
+        display: none;
     }
 
     header div h1 {
@@ -372,6 +439,106 @@ footer {
         background-color: none;
     }
 
+    .menu {
+        width: 100%;
+        height: auto;
+        background-image: url('../img/staff-bartender.jpg');
+        background-color: rgb(0, 4, 17);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(225, 239, 230);
+        text-align: center;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        gap: 1rem;
+        padding: 4rem;
+        
+    }
+
+    .menu-title {
+        width: 100%;
+        color: rgb(225, 239, 230);
+    }
+
+    .menu h2 {
+        border-bottom: none;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        /* max-width: 40rem; */
+        text-align: center;
+        font-size: 4rem;
+        color: rgb(225, 239, 230);
+    }
+    
+    .menu-section {
+        padding-top: 4rem;
+        text-align: center;
+    
+        /* flexbox properties */
+        display: flex;
+        width: 50rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 1rem;
+        /* background-color: green; */
+    }
+    
+    .menu-section h3 {
+        border: none;     
+        text-align: left;
+        padding-left: 4rem;
+        width: 100%;
+        margin: 0;
+        /* max-width: 30rem; */
+        margin-bottom: 1rem;
+    }
+    
+    .menu-item {
+        /* flexbox properties */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 0rem;
+        padding-left: 4rem;
+        min-width: 46em;
+        margin: 0%;
+    }
+
+    .menu-name {
+        width: 80%;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .menu-price {
+        width: 20%;
+        text-align: right;
+        font-size: 3rem;
+    }
+
+    .menu-desc {
+        width: 100%;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .last {
+        padding-bottom: 0rem;
+    }
+    
     .social {
         gap: 10rem;
     }
@@ -467,13 +634,13 @@ footer {
 /* screen sizes greater than or equal to 1280px */
 @media (min-width: 1280px) {
     * {
-        color: green;
+        /* color: green; */
     }
 }
 
 /* screen sizes greater than or equal to 1920px */
 @media (min-width: 1920px) {
     * {
-        color: blue;
+        /* color: blue; */
     }
 }
